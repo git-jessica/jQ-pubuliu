@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+</script>
+<body>
+<p>abcd</p>
+<p class="afters">assdd</p>
+
+<script src="jquery.min.js"></script>
+<script>
+    (function ($) {
+        $.fn.extend({
+            color:function (options) {
+                var defaults={width:'20px',height:"30px",backgroundColor:"black"};
+                options=$.extend({},defaults,options);
+                return $(this).each(function () {
+                    $(this).css({"width":options.width});
+                    $(this).css({"height":options.height});
+                    $(this).css({"backgroundColor":options.backgroundColor})
+                })
+            }
+        })
+    })(window.jQuery)
+
+    $(".afters").color({width:'200px',height:"500px",backgroundColor:"black"})
+
+//    瀑布流插件
+    (function($){
+        $.fn.extend({
+//            初始化的元素设定的是大容器
+            WaterFall:function(){
+                var $parentBox=$(this);
+                var parentWidth=$parentBox.Width();//大容器的宽度
+                var $itemsbox=$parentBox.children();//所有的子容器
+                var itemsWidth=$itemsbox.width();//子容器的宽度
+                var col=5;//列数
+                var space=(parentWidth-col*itemsWidth)/(col-1);//间距
+                
+//                记录每一列的高度
+                var arrHeight=[];
+
+
+
+            }
+        })
+    })(window.jQuery)
+</script>
+
+</body>
+</html>
